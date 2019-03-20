@@ -4,35 +4,25 @@
 
 <div class="row mt-5">
   <div class="col-12">
-    <div class="row">
-      <p>
-        <div class="card mr-5" style="width: 18rem;">
-          <img src="https://via.placeholder.com/200" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+    {% if visits == 1 %}
+      <h1> Welcome to Starlight! </h1>
+    {% else %}
+      <h1> Welcome back to Starlight! </h1>
+    {% endif %}
 
-        <div class="card mr-5" style="width: 18rem;">
-          <img src="https://via.placeholder.com/200" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1bO1bZic2xef-jbOKXGmDZkYy6kFscVxNh_j44IdxYZgBN4xJ" alt="user-pic">
 
-        <div class="card mr-5" style="width: 18rem;">
-          <img src="https://via.placeholder.com/200" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </p>
+        <p>
+          Email: {{email}}
+        </p>
 
+        <p>
+          Password: {{password}}
+        </p>
 
-    </div>
+        <p>
+          <a href="{{url_for('logout')}}">Logout</a>
+        </p>
   </div>
 
 </div>
